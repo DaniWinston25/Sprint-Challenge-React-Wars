@@ -1,17 +1,20 @@
 import React from 'react';
-import PeepsCard from './../PeepsCard/PeepsCard';
+// import PeepsCard from './../PeepsCard/PeepsCard';
+
 
 
 
 function SWPeople(props){
-    {props.data.map((people, index)=>{
+    // console.log("string",props)
+    props.data.map((people, index)=>{
         return(
             <div>
-                <PeepsCard key ={index} people={people}/>
+                {/* <PeepsCard key ={index} people={people}/>  */}
+                This is the first component
             </div>
         )
     })}
-}
+;
 
 
 export default SWPeople;

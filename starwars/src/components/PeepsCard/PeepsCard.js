@@ -1,9 +1,9 @@
 import React from 'react'
 
  function PeepsCard(props) {
-    return (
+    return ( 
         <div>
-    <h1>{props.people.name}</h1>
+ <h1>{props.people.name}</h1>
     <h2>{props.people.films}</h2>
 <p>{props.people.birth_year}</p>
 <p>{props.people.homeworld}</p>
@@ -13,8 +13,8 @@ import React from 'react'
  <p>{props.people.skin_color}</p>
  <p>{props.people.eye_color}</p>
  <p>Vehicles:{props.people.vehicles}</p>
- <p>Starships:{props.people.starships}</p>
- 
+ <p>Starships:{props.people.starships}</p> 
+ this is a component
         </div>
     )
 }
