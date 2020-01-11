@@ -11,7 +11,7 @@ const App = () => {
       .get('https://swapi.co/api/people/')
       .then(res => {
         console.log("THE DATA FROM THE API: ", res.data)
-        setData(res.data)
+        setData(res.data.results)
       })
       .catch(err=>console.log(err))
   },[]) 
