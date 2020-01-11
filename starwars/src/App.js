@@ -1,13 +1,11 @@
 import React,{useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
-import SWPeople from './components/Star Wars People/SWPeople';
+import SWPeeps from './components/SWPeeps/SWPeeps';
 
-const App = (props) => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+const App = () => {
+
   const[data, setData]= useState([]);
-
   useEffect(()=>{
       axios
       .get('https://swapi.co/api/people/')
@@ -17,19 +15,15 @@ const App = (props) => {
       })
       .catch(err=>console.log(err))
   },[]) 
+ 
 
-// console.log(props)
-  // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
-console.log("THE DATA: ", data)
   return (
     <div className="App">
+      <SWPeeps data ={data}/>
       <h1 className="Header">React Wars</h1>
-      <SWPeople data={data}/>
     
     </div>
   );
-}
 
+}
 export default App;
